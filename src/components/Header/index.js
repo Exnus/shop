@@ -1,6 +1,7 @@
 import React from 'react';
 import GeneralMenu from 'containers/GeneralMenu';
 import ContactsHeader from 'containers/ContactsHeader';
+import MenuBurger from 'containers/MenuBurger';
 import CartIndicator from 'containers/CartIndicator';
 import { stringify as bem } from 'rebem-classname';
 
@@ -19,6 +20,7 @@ export default class Header extends React.PureComponent {
           <div className={bem({ block, elem: 'secondary' })}>
             <ContactsHeader />
           </div>
+          <MenuBurger />
           <CartIndicator />
         </div>
       </header>

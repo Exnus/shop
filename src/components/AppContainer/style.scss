@@ -1,5 +1,6 @@
 @import 'sass/style';
 @import '@material/typography/mixins';
+@import '@material/elevation/mixins';
 @import '@material/layout-grid/mixins';
 
 .app-container {
@@ -10,8 +11,14 @@
   transition: animation-moving(transform, 500ms);
   transform: translate3d(0, 0, 0);
   will-change: transform;
+  z-index: 5;
+
+  @include mdc-elevation(10);
 
   &_aside-pushed {
     transform: translate3d(-#{$cart-size}, 0, 0);
+  }
+  &_menu-pushed {
+    transform: translate3d(#{$cart-size}, 0, 0);
   }
 }

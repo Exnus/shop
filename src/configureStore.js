@@ -5,6 +5,7 @@ import createSagaMiddleware from 'redux-saga';
 import throttle from 'lodash/throttle';
 import { loadState, saveState } from './localStorage';
 import getCartStorage from 'containers/Cart/localStorage';
+import getMenuStorage from 'containers/Menu/localStorage';
 import sagas from './sagas';
 import { fromJS } from 'immutable';
 
@@ -23,8 +24,9 @@ export default function storeConfigure(history) {
     throttle(() => {
       const state = store.getState();
       const cartStorage = getCartStorage(state);
+      const menuStorage = getMenuStorage(state);
 
-      saveState({ ...cartStorage });
+      saveState({ ...cartStorage, ...menuStorage });
     }, 1000)
   );
 

@@ -8,15 +8,17 @@
   text-align: center;
   white-space: nowrap;
 
-  @include mdc-theme-prop(color, text-secondary-on-dark);
+  @include mdc-theme-prop(color, text-secondary-on-light);
 
   @include media-query(mobile) {
-    height: 100%;
+    //height: 100%;
     transition: mdc-animation-enter(opacity, 200ms), transition(font-size);
     opacity: 0.3;
     will-change: opacity, font-size;
 
     @include mdc-typography(caption);
+    font-size: 1.15rem;
+    line-height: 2.25rem;
 
     &_active {
       opacity: 1;
@@ -32,7 +34,9 @@
   @include media-query(desktop) {
     @include mdc-typography(body2);
 
-    text-transform: uppercase;
+    //text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1rem;
 
     &:not(.nav-item_active) {
       cursor: pointer;
@@ -40,18 +44,18 @@
       will-change: color;
 
       &:hover {
-        @include mdc-theme-prop(color, text-disabled-on-dark, false);
+        @include mdc-theme-prop(color, text-disabled-on-light, false);
       }
     }
   }
 
   &:hover,
   &_active {
-    @include mdc-theme-prop(color, text-primary-on-dark, false);
+    @include mdc-theme-prop(color, text-primary-on-light, false);
   }
 
   &:focus {
-    @include mdc-theme-prop(outline-color, text-secondary-on-dark);
+    @include mdc-theme-prop(outline-color, text-secondary-on-light);
   }
 
   a {
@@ -74,7 +78,7 @@
     }
 
     @include media-query(desktop) {
-      min-width: 160px;
+      min-width: 80px;
       padding: 0 24px;
     }
   }

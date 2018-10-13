@@ -8,6 +8,7 @@ import deliveryInfoReducer from 'containers/DeliveryInfo/reducer';
 import contactsInfoReducer from 'containers/ContactsInfo/reducer';
 import sellingProductsListReducer from 'containers/SellingProductsList/reducer';
 import cartReducer from 'containers/Cart/reducer';
+import menuReducer from 'containers/Menu/reducer';
 import orderReducer from 'containers/Order/reducer';
 import deliveryReducer from 'containers/Delivery/reducer';
 
@@ -20,6 +21,7 @@ const appReducer = combineReducers({
   ...deliveryInfoReducer,
   ...contactsInfoReducer,
   ...cartReducer,
+  ...menuReducer,
   ...orderReducer,
   ...deliveryReducer
 });

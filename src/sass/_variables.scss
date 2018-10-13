@@ -1,5 +1,5 @@
-$primaryColor: #445533;
-$secondaryColor: #6b5c3f;
+$primaryColor: #222;
+$secondaryColor: #7040ce;
 
 $mdc-theme-primary: $primaryColor;
 $mdc-theme-secondary: $secondaryColor;
@@ -7,7 +7,7 @@ $mdc-theme-background: #fff;
 
 $mdc-theme-primary-light: #647c64;
 $mdc-theme-primary-dark: #443f30;
-$mdc-theme-secondary-light: #544b38;
+$mdc-theme-secondary-light: #222;
 $mdc-theme-secondary-dark: #4d4536;
 
 $mdc-theme-text-colors: (
@@ -37,7 +37,10 @@ $typography-font-family-path: 'https://fonts.googleapis.com/css?family=Roboto:30
 
 $tab-with-text-height: 48px;
 
-$header-size: 48px + 16px;
+$header-size: 48px + 260px;
 $cart-size: 320px;
 
 $mdc-list-side-padding: 16px;
+
+$mds-button-height: 40px;
+$mdc-button-horizontal-padding: 22px;

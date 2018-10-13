@@ -33,4 +33,5 @@ $ npm start
 ```bash
 # build to <build> dir
 $ npm run build
+$ rsync -avz -e "ssh" ./build/ root@178.62.230.18:/home/admin/web/izo-design.ru/public_html/
 ```

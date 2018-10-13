@@ -6,7 +6,8 @@
   height: calc(100vh - #{$header-size});
 
   @include media-query(mobile) {
-    padding-bottom: $header-size;
+    height: calc(100vh - #{$header-size / 4.1});
+    padding-bottom: $header-size / 4.1;
   }
 
   @include media-query(desktop) {
@@ -35,6 +36,6 @@
     border-radius: 2px;
     background-color: #fff;
 
-    @include mdc-elevation(3);
+    //@include mdc-elevation(3);
   }
 }

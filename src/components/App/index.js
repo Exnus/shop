@@ -4,6 +4,7 @@ import features from 'features';
 import ProgressiveImage from 'components/ProgressiveImage';
 import Header from 'components/Header';
 import Main from 'components/Main';
+import Menu from 'containers/Menu';
 import Cart from 'containers/Cart';
 import Order from 'containers/Order';
 import AppContainer from 'containers/AppContainer';
@@ -44,6 +45,7 @@ export default class App extends React.PureComponent {
           </div>
           {this.renderBg()}
         </AppContainer>
+        <Menu />
         <Cart />
         <Order />
       </div>

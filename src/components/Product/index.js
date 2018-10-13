@@ -34,7 +34,7 @@ export default class Product extends React.PureComponent {
         <div className={bem({ block, elem: 'image' })}>{this.renderImage()}</div>
         <div className={bem({ block, elem: 'info' })}>
           <div className={bem({ block, elem: 'price-info' })}>
-            <div className={bem({ block, elem: 'package' })}>{packageName}</div>
+            <div className={`${bem({ block, elem: 'package' })} exist`}>{packageName}</div>
             <div className={bem({ block, elem: 'price' })}>
               <Money value={price} currency={currency} />
             </div>

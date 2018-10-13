@@ -10,12 +10,14 @@
   transform: translate3d(-50%, 100px, 0);
   opacity: 0;
   will-change: opacity, transform;
+  zoom: 0.7;
 
   &__content {
     font-style: italic;
     text-align: center;
-    color: #fff;
+    color: $primaryColor;
     -webkit-font-smoothing: antialiased;
+    line-height: 1.1rem;
 
     &_notouch {
       font-size: 16px;
@@ -45,7 +47,7 @@
     content: '';
     animation: touch-dot 1.5s $animation-moving-flash-function infinite;
     border-radius: 100%;
-    background: #fff;
+    background: $primaryColor;
     line-height: 0;
 
     @include media-query(phone) {
@@ -61,7 +63,7 @@
       margin-bottom: 15px;
       content: '•';
       animation: mouse-dot 1.5s $animation-moving-flash-function infinite;
-      border: 2px solid white;
+      border: 2px solid $primaryColor;
       border-radius: 30px;
       background: transparent;
       font-size: 22px;
@@ -122,7 +124,7 @@
   }
 
   33% {
-    color: #fff;
+    color: $primaryColor;
   }
 
   to {

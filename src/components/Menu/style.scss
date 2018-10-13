@@ -2,14 +2,14 @@
 @import '@material/elevation/mixins';
 @import '@material/theme/mixins';
 
-.cart {
+.menu {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   overflow: hidden;
   box-sizing: border-box;
   width: 0;
-  transform: translate3d($cart-size, 0, 0);
+  transform: translate3d(-$cart-size, 0, 0);
   opacity: 0;
   will-change: opacity, transform;
   touch-action: none;
@@ -27,7 +27,7 @@
     padding: 0 24px;
     transition: mdc-animation-enter(opacity, 500ms), animation-moving(transform, 500ms);
 
-    &.cart_open {
+    &.menu_open {
       transition: mdc-animation-exit-permanent(opacity, 300ms), animation-moving(transform, 500ms);
     }
   }
@@ -38,9 +38,14 @@
     width: $cart-size !important;
     height: 100vh;
     padding: 0 24px;
+    padding-top: 26vh;
     transform: translate3d(0, 0, 0);
     pointer-events: auto;
     opacity: 1;
+
+    @include media-query(mobile) {
+      padding-top: 30px;
+    }
 
     //@include mdc-elevation(10);
   }

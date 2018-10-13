@@ -6,8 +6,9 @@
   @extend %syslist;
 
   @include media-query(mobile) {
-    display: flex;
+    //display: flex;
     justify-content: center;
+    display: none;
   }
 
   @include media-query(desktop) {

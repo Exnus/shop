@@ -13,11 +13,14 @@ html {
   overflow: hidden;
   display: flex;
   flex-direction: row;
+  font-weight: 400;
 
   @include mdc-typography-base;
 
   &__body {
     @include mdc-typography('body1');
+    font-size: 1rem;
+    line-height: 1.33rem;
   }
 
   &__bg {
@@ -28,5 +31,6 @@ html {
     left: 0;
     z-index: -1;
     background-color: $mdc-theme-primary-dark;
+    display: none;
   }
 }

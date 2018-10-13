@@ -7,12 +7,14 @@ const block = 'app-container';
 
 export default class AppContainer extends React.PureComponent {
   static propTypes = {
-    openCart: PropTypes.bool
+    openCart: PropTypes.bool,
+    openMenu: PropTypes.bool
   };
 
   getBemMods() {
     return {
-      'aside-pushed': !!this.props.openCart
+      'aside-pushed': !!this.props.openCart,
+      'menu-pushed': !!this.props.openMenu
     };
   }
   render() {

@@ -39,13 +39,15 @@ $field-disabled-border-on-light: rgba(#231f20, 0.26);
     @include mdc-typography-base;
 
     width: 100%;
-    padding: 0 0 8px;
     transition: transition(opacity);
     border: none;
-    border-bottom: 1px solid $field-underline-on-light-idle;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.3);
     background: none;
     font-size: inherit;
     appearance: none;
+    background: #f7f7f7;
+    padding: 10px;
+    border-radius: 4px;
 
     // We use only a subset of the MDC typography values here as changing things such as line-height
     // affects how the labels are transformed.
@@ -121,7 +123,7 @@ $field-disabled-border-on-light: rgba(#231f20, 0.26);
   &__label {
     position: absolute;
     bottom: 8px;
-    left: 0;
+    left: 16px;
     cursor: text;
     transition: transition(transform), transition(color);
     transform-origin: left top;

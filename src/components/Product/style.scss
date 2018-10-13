@@ -5,13 +5,13 @@
 @import '@material/elevation/mixins';
 
 $product-item-image-column: (
-  desktop: 7,
+  desktop: 6,
   tablet: 8,
   phone: 4
 );
 
 $product-item-info-column: (
-  desktop: 5,
+  desktop: 6,
   tablet: 8,
   phone: 4
 );
@@ -62,8 +62,9 @@ $product-item-info-column: (
   &__info {
     overflow: hidden;
     background-color: #fff;
+    //text-align: center;
 
-    @include mdc-elevation(3);
+    //@include mdc-elevation(3);
 
     @include media-query(mobile) {
       padding: 16px;
@@ -75,9 +76,10 @@ $product-item-info-column: (
 
     @include media-query(desktop) {
       margin: 16px 0;
-      padding: 16px 32px 32px;
+      padding: 32px 32px 40px 32px;
       border-top-right-radius: 2px;
       border-bottom-right-radius: 2px;
+      min-height: 440px;
 
       @include mdc-layout-grid-cell-align(middle);
     }
@@ -101,13 +103,23 @@ $product-item-info-column: (
   &__package {
     @include mdc-typography(subheading1);
 
-    @include mdc-theme-prop(color, text-secondary-on-background);
+    //@include mdc-theme-prop(color, text-secondary-on-background);
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+
+    &.exist {
+      background: #77c551;
+    }
+    &.request {
+      background: #e8b40d;
+    }
   }
 
   &__price {
     @include mdc-typography(display2);
 
-    @include mdc-theme-prop(color, secondary-dark, false);
+    @include mdc-theme-prop(color, text-secondary-on-background, false);
 
     @include media-query(phone) {
       @include mdc-typography(display1);
@@ -126,7 +138,14 @@ $product-item-info-column: (
       @include mdc-typography(headline);
     }
 
+    @include media-query(desktop) {
+      margin-top: 60px;
+    }
+
+    font-size: 3rem;
+    margin-top: 1.5rem;
     margin-bottom: 24px;
+    //text-align: center;
   }
 
   &__description {
@@ -134,6 +153,9 @@ $product-item-info-column: (
 
     margin-bottom: 24px;
     white-space: pre-line;
+    //text-align: center;
+    font-size: 1.1rem;
+    font-weight: 300;
 
     @include media-query(mobile) {
       overflow-y: auto;
@@ -144,7 +166,7 @@ $product-item-info-column: (
   &__actions {
     @include media-query(desktop) {
       display: flex;
-      justify-content: flex-end;
+      //justify-content: center;
     }
   }
 }

@@ -5,27 +5,27 @@ import { stringify as bem } from 'rebem-classname';
 
 import './style.css';
 
-const block = 'cart';
+const block = 'menu';
 
-export default class Cart extends React.PureComponent {
+export default class Menu extends React.PureComponent {
   static propTypes = {
-    openCart: PropTypes.bool,
+    openMenu: PropTypes.bool,
     onClickClose: PropTypes.func
   };
 
   constructor(props) {
     super(props);
 
-    const open = !!props.openCart;
+    const open = !!props.openMenu;
 
     this.state = { open };
   }
 
   componentWillReceiveProps(props) {
-    const { openCart } = props;
+    const { openMenu } = props;
 
-    if (openCart !== undefined) {
-      if (openCart) {
+    if (openMenu !== undefined) {
+      if (openMenu) {
         this.open();
       } else {
         this.close();
@@ -72,11 +72,10 @@ export default class Cart extends React.PureComponent {
         className={bem({ block, mods: this.getBemMods() })}
         onTransitionEnd={this.handleTransitionEnd}
       >
-        <h3>Ваш заказ</h3>
         {this.props.children}
         <div className={bem({ block, elem: 'actions' })}>
           <Button stretch onClick={this.props.onClickClose}>
-            Вернуться к товарам
+            Скрыть
           </Button>
         </div>
       </div>

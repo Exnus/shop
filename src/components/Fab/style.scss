@@ -24,7 +24,7 @@
       &:active {
         cursor: default;
 
-        @include mdc-elevation(6);
+        @include mdc-elevation(3);
       }
     }
   }
@@ -48,7 +48,7 @@
 
   &_disabled {
     .fab__inner {
-      background-color: rgba(white, 0.3);
+      @include mdc-fab-container-color(primary);
       color: #f3f3f3;
     }
   }
